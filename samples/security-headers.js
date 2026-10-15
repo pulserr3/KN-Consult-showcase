@@ -1,5 +1,4 @@
-// Build a Content Security Policy that allows only our own files plus the
-// hashes of the few inline scripts found in the generated pages.
+// csp: only our own files plus hashes of the inline scripts
 const crypto = require('crypto');
 
 function inlineScriptHashes(html) {

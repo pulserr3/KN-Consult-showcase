@@ -1,6 +1,4 @@
-// Merge a translation over the English base.
-// Missing keys fall back to English and produce a warning, so an unfinished
-// translation never breaks a page. Lists are compared by length.
+// fall back to english when a key is missing, and warn about it
 const isObj = v => v && typeof v === 'object' && !Array.isArray(v);
 
 function mergeContent(base, over, trail, lang, warnings) {
