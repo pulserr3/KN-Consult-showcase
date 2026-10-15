@@ -1,0 +1,90 @@
+/* ==========================================================================
+   DESIGN TOKENS
+   Every colour, font, size and timing used on the site lives here.
+   Change a value once and the whole site follows.
+   ========================================================================== */
+
+/* --- Fonts (self-hosted, no Google CDN: GDPR friendly) -------------------
+   Inter for text, Source Serif 4 for headings. Both are variable fonts, so
+   one file per script covers every weight. Latin, Latin-extended (Romanian) and Cyrillic
+   (Bulgarian) are included for EN, BG, DE, IT and RO. */
+@font-face {
+  font-family: "Inter Variable"; font-style: normal; font-display: swap; font-weight: 100 900;
+  src: url(fonts/inter-latin-wght-normal.woff2) format("woff2-variations");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "Inter Variable"; font-style: normal; font-display: swap; font-weight: 100 900;
+  src: url(fonts/inter-cyrillic-wght-normal.woff2) format("woff2-variations");
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+@font-face {
+  font-family: "Inter Variable"; font-style: normal; font-display: swap; font-weight: 100 900;
+  src: url(fonts/inter-latin-ext-wght-normal.woff2) format("woff2-variations");
+  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: "Source Serif 4 Variable"; font-style: normal; font-display: swap; font-weight: 200 900;
+  src: url(fonts/source-serif-4-latin-wght-normal.woff2) format("woff2-variations");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "Source Serif 4 Variable"; font-style: normal; font-display: swap; font-weight: 200 900;
+  src: url(fonts/source-serif-4-cyrillic-wght-normal.woff2) format("woff2-variations");
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+@font-face {
+  font-family: "Source Serif 4 Variable"; font-style: normal; font-display: swap; font-weight: 200 900;
+  src: url(fonts/source-serif-4-latin-ext-wght-normal.woff2) format("woff2-variations");
+  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+:root {
+  color-scheme: only light;
+  /* --- Colour: navy (brand, primary) + silver (accent) on cool off-white ---
+     Rough balance: 60% off-white, 30% navy, 10% silver. */
+  --navy-900: #0a1744;   /* footer, hero base */
+  --navy-800: #102468;   /* headings */
+  --navy-700: #265df2;   /* brand blue, primary buttons (white text 5.3:1, AA) */
+  --navy-600: #1d49cc;   /* links */
+  --navy-500: #3d76ff;   /* highlights, focus glow */
+  --navy-200: #c8d6fd;
+  --navy-100: #e2eafd;
+  --navy-50:  #f0f4fe;
+
+  --silver-300: #cdd4df; /* accent on DARK backgrounds */
+  --silver-400: #b3bccb;
+  --silver-500: #94a0b3; /* decoration (lines, dots) */
+  --silver-600: #3f4b5e; /* small accent text on light backgrounds (AA) */
+  --silver-700: #475163;
+
+  --sand-50:  #f5f7fa;   /* page background */
+  --sand-100: #eceff4;   /* alternate sections */
+  --sand-200: #dde2ea;   /* borders */
+
+  --ink:       #1b2433;  /* body text */
+  --ink-muted: #3b4659;  /* secondary text */
+  --white:     #ffffff;
+  --success:   #1e7f5c;
+  --error:     #b42318;
+
+  /* --- Type --- */
+  --font-sans:  "Inter Variable", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: "Source Serif 4 Variable", Georgia, "Times New Roman", serif;
+
+  /* --- Shape and depth --- */
+  --radius-sm: 10px;
+  --radius:    16px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 2px 10px rgba(10, 23, 68, .06);
+  --shadow-md: 0 14px 40px -12px rgba(10, 23, 68, .22);
+  --shadow-lg: 0 30px 60px -20px rgba(3, 10, 24, .5);
+
+  /* --- Motion: calm and short --- */
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --t-fast: .2s;
+  --t-med: .28s;
+
+  /* --- Layout --- */
+  --header-h: 76px;
+}
